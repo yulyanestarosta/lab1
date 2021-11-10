@@ -104,7 +104,7 @@ public:
 
 };
 
-void output(string name, string file) {     //аутпут в файл для построения графиков
+void output(string name, string file) {     //вывод данных в файл для построения графиков
     std::ofstream resout(file, std::ios::app);
     if (resout.is_open()) {
         resout << name << std::endl;
@@ -120,7 +120,7 @@ private:
 public:
     ProbabilityTest(unsigned seed, int test_min, int test_max, unsigned test_count) : seed(seed), test_min(test_min), test_max(test_max), test_count(test_count) { }
 
-    float operator()(State const& s) const {     //можем оставить ссылку только на элемент виртуального класса
+    float operator()(State const& s) const {     
         std::default_random_engine rng(seed);
         std::uniform_int_distribution<int> dstr(test_min, test_max);
         unsigned good = 0;
