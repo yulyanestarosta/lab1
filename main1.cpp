@@ -171,8 +171,8 @@ int main(int argc, const char* argv[]) {
     ProbabilityTest test1(10, 0, 100, 1000);
     for (int i = 0; i < 1000; i++) {
         output(std::to_string(1000 + 1000 * i), "number_of_tests.txt");
-        output(std::to_string(test1(s)), "segment_result.txt"); //Вывод для сегмента
-        output(std::to_string(test1(ss)), "set_result.txt"); //Выврд для сета
+        output(std::to_string(test1(s)), "segment_out.txt"); //Вывод для сегмента
+        output(std::to_string(test1(ss)), "set_out.txt"); //Выврд для сета
         test1.TestNumberChange(1000+1000*(i+1));
     }
     */
